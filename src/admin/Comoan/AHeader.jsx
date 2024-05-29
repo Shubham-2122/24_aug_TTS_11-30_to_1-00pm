@@ -1,7 +1,18 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function AHeader() {
+
+    const redirect = useNavigate()
+
+    const logout=()=>{
+        localStorage.removeItem('aloginid')
+        localStorage.removeItem('aname')
+        console.log("logout success")
+        toast.success("logout success")
+        redirect("/Dashboard")
+    }
     return (
         <div>
             <div>
@@ -63,8 +74,39 @@ function AHeader() {
                             </div>
                         </div>
                         <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
+                        {(
+                            ()=>{
+                                if(localStorage.getItem("aloginid"))
+                                    {
+                                        return(
+                                            <>
+                                                <Link className='nav-item nav-link'>hiii...{localStorage.getItem('aname')}</Link>
+                                            </>
+                                        )
+                                    }
+                            }
+                        )()}
+                        {(
+                            ()=>{
+                                if(localStorage.getItem("aloginid"))
+                                    {
+                                        return(
+                                            <>
+                                                <Link className="nav-item nav-link" onClick={logout}>logout</Link>
+                                            </>
+                                        )
+                                    }
+                                else{
+                                    return(
+                                        <>
+                                            <NavLink className="nav-item nav-link" to="/Alogin">Login</NavLink>
+                                        </>
+                                    )
+                                }
+                            }
+                        )()}
                     </div>
-                    <a href className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i className="fa fa-arrow-right ms-3" /></a>
+                   
                 </div>
             </nav>
 
