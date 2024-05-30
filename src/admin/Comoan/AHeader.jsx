@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 function AHeader() {
 
     const redirect = useNavigate()
+
+    useEffect(()=>{
+        if(!localStorage.getItem("aloginid"))
+        {
+            redirect("/Alogin")
+        }
+    })
 
     const logout=()=>{
         localStorage.removeItem('aloginid')
@@ -53,7 +60,7 @@ function AHeader() {
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <div className="navbar-nav ms-auto p-4 p-lg-0">
                         <NavLink to="/Dashboard" className="nav-item nav-link ">Home</NavLink>
-                        <NavLink to="/about" className="nav-item nav-link">About</NavLink>
+                        <NavLink to="/usermanage" className="nav-item nav-link">UserM</NavLink>
                         {/* <NavLink to="/service" className="nav-item nav-link">Service</NavLink> */}
                         <div className="nav-item dropdown">
                             <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
@@ -79,27 +86,26 @@ function AHeader() {
                                 if(localStorage.getItem("aloginid"))
                                     {
                                         return(
-                                            <>
-                                                <Link className='nav-item nav-link'>hiii...{localStorage.getItem('aname')}</Link>
-                                            </>
+                                            <NavLink className="nav-item nav-link">hii...{localStorage.getItem("aname")}</NavLink>
                                         )
                                     }
                             }
                         )()}
+                        {/* login / lout */}
                         {(
                             ()=>{
                                 if(localStorage.getItem("aloginid"))
                                     {
                                         return(
                                             <>
-                                                <Link className="nav-item nav-link" onClick={logout}>logout</Link>
+                                                <Link className="nav-item nav-link" onClick={logout}>Alogout</Link>
                                             </>
                                         )
                                     }
                                 else{
                                     return(
                                         <>
-                                            <NavLink className="nav-item nav-link" to="/Alogin">Login</NavLink>
+                                            <NavLink className="nav-item nav-link" to="/Alogin">ALogin</NavLink>
                                         </>
                                     )
                                 }

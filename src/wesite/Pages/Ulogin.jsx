@@ -1,20 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
-import AFooter from '../Comoan/AFooter';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Comon_cpomnent/Header';
 
-function Alogin() {
+function Ulogin() {
     const redirect = useNavigate()
 
-    useEffect(()=>{
-        if(localStorage.getItem("aloginid"))
-        {
-            redirect("/Dashboard")
-        }
-    })
-
+   
     const [fromvalue,setfromvalue]= useState({
         email:"",
         password:"",
@@ -43,7 +37,7 @@ function Alogin() {
         // match proceess
         try {
 
-            const res = await axios.get(`http://localhost:3000/admin?email=${email}`)
+            const res = await axios.get(`http://localhost:3000/user?email=${email}`)
 
             console.log(res.data)
 
@@ -62,13 +56,19 @@ function Alogin() {
                 return false
             }
 
+            if(user.status !== "unblock")
+            {
+                toast.error("Acoount has been block..pls contact support")
+                return false
+            }
+
             // session creted 
-            localStorage.setItem('aloginid',user.id)
-            localStorage.setItem('aname',user.name)
+            localStorage.setItem('Uloginid',user.id)
+            localStorage.setItem('Uname',user.name)
             
             console.log("login successfull")
             toast.success("login succssfully")
-            redirect("/Dashboard")
+            redirect("/")
         } catch (error) {
             console.error("api worng",error)
         }
@@ -76,6 +76,7 @@ function Alogin() {
 
     return (
         <div>
+            <Header/>
             <MDBContainer fluid className="p-3 my-5 h-custom">
 
                 <form action="" onSubmit={submithadle}>
@@ -129,9 +130,9 @@ function Alogin() {
 
 
             </MDBContainer>
-            <AFooter />
+            
         </div>
     )
 }
 
-export default Alogin
+export default Ulogin

@@ -11,6 +11,8 @@ import AMangeservice from "./admin/Pages/AMangeservice";
 import Alogin from "./admin/Pages/Alogin";
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import Ulogin from "./wesite/Pages/Ulogin";
+import Usermange from "./admin/Pages/Usermange";
 
 
 function App() {
@@ -27,11 +29,13 @@ function App() {
           <Route path="/contact" element={<><Contact/></>} />
           <Route path="/service" element={<><Service/></>} />  
           <Route path="/project" element={<><Project /></>} />
+          <Route path="/ulogin" element={<><Ulogin /></>} />
 
 
           <Route path="/Dashboard"  element={<><Adashboard /></>}/>
           <Route path="/addservice" element={<><Addservice /></>} />
           <Route path="/Mangesev" element={<><AMangeservice/></>} /> 
+          <Route path="/usermanage" element={<><Usermange/></>} /> 
           <Route path="/Alogin" element={<><Alogin/></>} /> 
         </Routes >
       </BrowserRouter>
