@@ -109,7 +109,7 @@ function Alogin() {
                                 <p className="text-center fw-bold mx-3 mb-0">Or</p>
                             </div>
 
-                            <MDBInput wrapperClass='mb-4' name='email' value={fromvalue.email} onChange={getchnage} label='Email address' id='formControlLg' type='email' size="lg" />
+                            <MDBInput wrapperClass='mb-4'  name='email' value={fromvalue.email} onChange={getchnage} label='Email address' id='formControlLg' type='email' size="lg" />
                             <MDBInput wrapperClass='mb-4' name='password' value={fromvalue.password} onChange={getchnage} label='Password' id='formControlLg' type='password' size="lg" />
 
                             <div className="d-flex justify-content-between mb-4">
