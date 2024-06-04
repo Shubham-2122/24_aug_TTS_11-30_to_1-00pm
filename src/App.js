@@ -9,10 +9,12 @@ import Adashboard from "./admin/Pages/Adashboard";
 import Addservice from "./admin/Pages/Addservice";
 import AMangeservice from "./admin/Pages/AMangeservice";
 import Alogin from "./admin/Pages/Alogin";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Ulogin from "./wesite/Pages/Ulogin";
 import Usermange from "./admin/Pages/Usermange";
+import Uregister from "./wesite/Pages/Uregister";
+import Profile from "./wesite/Pages/Profile";
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
           <Route path="/service" element={<><Service/></>} />  
           <Route path="/project" element={<><Project /></>} />
           <Route path="/ulogin" element={<><Ulogin /></>} />
+          <Route path="/uregister" element={<><Uregister /></>} />
+          <Route path="/profile" element={<><Profile /></>} />
 
 
           <Route path="/Dashboard"  element={<><Adashboard /></>}/>

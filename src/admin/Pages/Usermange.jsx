@@ -18,6 +18,13 @@ function Usermange() {
         setdata(res.data)
     }
 
+    // delete user 
+    const deletehadle=async(id)=>{
+        const res = await axios.delete(`http://localhost:3000/user/${id}`)
+        console.log(res.data)
+        fetch()
+    }
+
     const statuhandle=async(id)=>{
         const res =await axios.get(`http://localhost:3000/user/${id}`)
         const currentstatus = res.data.status
@@ -81,7 +88,7 @@ function Usermange() {
                                             <td>{value.mobile}</td>
                                             <td><button className='btn btn-success' onClick={()=>statuhandle(value.id)}>{value.status}</button></td>
                                             <td><button className='btn btn-info'>view</button>
-                                                <button className='btn btn-danger'>Delete</button>
+                                                <button className='btn btn-danger' onClick={()=>{deletehadle(value.id)}}>Delete</button>
                                             </td>
                                         </tr>
                                     )

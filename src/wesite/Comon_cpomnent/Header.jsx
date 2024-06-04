@@ -71,7 +71,7 @@ function Header() {
                                     {
                                         return(
                                             <>
-                                                <NavLink className="nav-item nav-link">hii...{localStorage.getItem("Uname")}</NavLink>
+                                                <NavLink to="/profile" className="nav-item nav-link">hii...{localStorage.getItem("Uname")}</NavLink>
                                             </>
                                         )
                                     }

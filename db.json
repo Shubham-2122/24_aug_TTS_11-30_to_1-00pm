@@ -34,38 +34,47 @@
   "admin": [
     {
       "id": "1",
-      "name":"admin",
+      "name": "admin",
       "email": "admin@gmail.com",
       "password": "1234"
     }
   ],
-  "user":[
+  "user": [
     {
-      "id":"1",
-      "name":"user1",
-      "email":"user1@gmail.com",
-      "password":"123456",
-      "mobile":"86875765",
-      "image":"https://apollo.olx.in/v1/files/uxuwam8bcisq3-IN/image;s=360x0",
-      "status":"unblock"
+      "id": "1",
+      "name": "shubham",
+      "email": "user1@gmail.com",
+      "password": "123456",
+      "mobile": "86875765",
+      "image": "https://apollo.olx.in/v1/files/uxuwam8bcisq3-IN/image;s=360x0",
+      "status": "unblock"
     },
     {
-      "id":"2",
-      "name":"user2",
-      "email":"user2@gmail.com",
-      "password":"12345",
-      "mobile":"86875765",
-      "image":"https://apollo.olx.in/v1/files/uxuwam8bcisq3-IN/image;s=360x0",
-      "status":"unblock"
+      "id": "2",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "12345",
+      "mobile": "86875765",
+      "image": "https://apollo.olx.in/v1/files/uxuwam8bcisq3-IN/image;s=360x0",
+      "status": "unblock"
     },
     {
-      "id":"3",
-      "name":"user3",
-      "email":"user3@gmail.com",
-      "password":"1234",
-      "mobile":"86875765",
-      "image":"https://apollo.olx.in/v1/files/uxuwam8bcisq3-IN/image;s=360x0",
-      "status":"block"
+      "id": "3",
+      "name": "user3",
+      "email": "user3@gmail.com",
+      "password": "1234",
+      "mobile": "86875765",
+      "image": "https://apollo.olx.in/v1/files/uxuwam8bcisq3-IN/image;s=360x0",
+      "status": "unblock"
+    },
+    {
+      "id": "1717483295266",
+      "name": "ketan1",
+      "email": "ketan@gmail.com",
+      "password": "123456",
+      "mobile": "34653464354",
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA1gMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAIDBAYBB//EAEQQAAIBAwMBBQUGAgcGBwEAAAECAwAEEQUSITEGE0FRYSJxgZGhFCMyQrHRUvAVFjNiweHxB1OChZLjQ1WTlKKj0jT/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/xAAhEQEBAAICAgMBAQEAAAAAAAAAAQIRAxIhQQQTMRRhUf/aAAwDAQACEQMRAD8AgvLtIn3yxEqB7S8gI3mceNFOzeqGK6hmeRZEjBCqwJycVnZ53JMcgLc5ds5zUKuImCLuXb7RB4r50zsu27Jp7pbXlvPCr96rsFBbn08qmhuEkLKo4GfpXi1hrF1FGyR3TjLeyik49c+dErPX7xWj2ynKhxvxn8X+ler+nH2x0r1uOZJFDJyD0NPDeHiK8os+111DEYe83JwAScYbPJNH9E7Ybi39IFQST7QHFbnPhTrW5DDnjpXeD0rHXHbGzkI7veqM45YAcD40ZsddtrpkRGILHA3Cukzxt1KaGMUsUlII4p1aQ2kzhRycU6uMoYc0Am8VJbjJGGI9kqeciu904ADukpHiRhiPEGnXEaLKNhYFfMZ2+tQCP2gsh9luSVbBB86qIbaPfbtA0ntW8geNx4qDx/iKsxPG1u4cqqklgV4Gc1Ru4vsqtdW4ZtmAxDZ2Afmx8efSpILa2uNJRo3JjfO7JJxk9etBNdgfdMrqAVaBgTnORxVYAJfbSyCJI1ZlK8+3wAP+k1KZdiRJdMQVLJz0J",
+      "status": "unblock"
     }
   ]
 }
